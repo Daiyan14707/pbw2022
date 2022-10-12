@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Video HTML</title>
+</head>
+<body>
+    
+    <h2>Video HTML</h2>
+    <p>
+        <button onclick="playVid()" type="button">Play Video</button>
+        <button onclick="pauseVid()" type="button">Pause Video</button>
+        <button onclick="durationVid()" type="button">Duration Video</button>
+        <button onclick="controlsOn()" type="button">Controls On</button>
+        <button onclick="controlsOff()" type="button">Controls Off</button>
+        <button onclick="loopStatus()" type="button">Loop Status</button>
+        <button onclick="loopOn()" type="button">Loop On</button>
+        <button onclick="loopOff()" type="button">Loop Off</button>
+    </p>
+
+    <video controls id="myVideo" width="75%">
+        <source src="media/movie.mp4" type="video/mp4">
+    </video>
+
+</body>
+<script>
+    var vid = document.getElementById("myVideo")
+
+    function playVid() {
+        vid.play();
+    }
+
+    function pauseVid() {
+        vid.pause();
+    }
+
+    function durationVid() {
+        alert(vid.duration);
+    }
+
+    function controlsOn() {
+        vid.controls = true;
+    }
+
+    function controlsOff() {
+        vid.controls = false;
+    }
+
+    function loopStatus() {
+        alert(vid.loop);
+    }
+
+    function loopOn() {
+        vid.loop = true;
+    }
+
+    function loopOff() {
+        vid.loop = false;
+    }
+</script>
+</html>
